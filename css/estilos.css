@@ -654,7 +654,43 @@ footer p {
         position: static;
     }
 }
+/* GALERÍA DE TATUAJES SLAG */
 
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.galeria h3 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.diseno-tatuaje {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.diseno-tatuaje img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #333;
+}
+
+.btn-me-gusta {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 @media (max-width: 480px) {
     #listaProductos {
         grid-template-columns: 1fr;
