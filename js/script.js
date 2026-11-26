@@ -630,3 +630,33 @@ if (formularioCita) {
         formularioCita.reset();
     });
 }
+
+function reaccionVideo(video, tipo) {
+
+    let clave = video + "_" + tipo;
+
+    let contador = Number(localStorage.getItem(clave)) || 0;
+
+    contador++;
+
+    localStorage.setItem(clave, contador);
+
+    document.getElementById(video + "-" + tipo).textContent = contador;
+}
+
+// Recuperar los contadores guardados
+document.addEventListener("DOMContentLoaded", function() {
+
+    for (let i = 1; i <= 9; i++) {
+
+        let video = "video" + i;
+
+        let like = Number(localStorage.getItem(video + "_like")) || 0;
+        let dislike = Number(localStorage.getItem(video + "_dislike")) || 0;
+
+        document.getElementById(video + "-like").textContent = like;
+
+        document.getElementById(video + "-dislike").textContent = dislike;
+    }
+
+});

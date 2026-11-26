@@ -696,3 +696,47 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+.video-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-card {
+    width: 280px;
+    background: #222;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.video-card video {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.reacciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.reacciones button {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 9px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.reacciones button:hover {
+    background: #8b0000;
+}
